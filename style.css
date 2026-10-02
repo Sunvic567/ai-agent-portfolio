@@ -21,3 +21,22 @@ dialog{padding:42px;border-radius:16px;box-shadow:0 30px 100px #15213b40;font-si
 @media(max-width:720px){.wrap{width:calc(100% - 36px)}header{padding:16px 0}.brand{font-size:.95rem}nav{gap:15px;font-size:.875rem}.nav-contact{padding:7px 10px}.hero{grid-template-columns:1fr;padding:46px 0;gap:35px}.hero h1{font-size:clamp(2.8rem,8.6vw,4.2rem)}.intro{font-size:1.08rem}.hero-panel{margin:0;box-shadow:none}.panel-body h2{font-size:2.3rem}.featured{grid-template-columns:1fr;margin-top:40px;padding:27px;gap:24px}.featured h2{font-size:2rem}.work{padding:55px 0}.section-top{display:block}.section-top>p{margin-top:17px}.section-top>p br{display:none}.project-grid{grid-template-columns:1fr;gap:18px}.project:last-child:nth-child(odd){grid-column:auto}.about{grid-template-columns:1fr;padding:55px 0;gap:24px}.contact{padding:30px;margin-bottom:30px}.contact h2{font-size:2.35rem}.hero-note{font-size:.875rem}footer{font-size:.8rem;gap:14px}dialog{padding:34px 25px}dialog h2{font-size:2rem}}
 @media(max-width:380px){nav{gap:10px}.brand{font-size:.85rem}.mark{font-size:1.1rem;padding:2px 7px}.nav-contact{padding:7px}.project-category{letter-spacing:.03em}.contact h2{font-size:2rem}.filters button{padding:8px 12px}}
 @media(prefers-reduced-motion:reduce){.project,.button{transition:none}.project:hover,.button:hover{transform:none}}
+
+/* Soft light palette: reduce bright white surfaces while preserving contrast. */
+:root{--ink:#202c43;--muted:#4d5b72;--blue:#294bc5;--line:#ccd4e0;--light:#e6ebf2}
+body{background:#e9edf3}
+header{background:#e9edf3f5}
+.featured,.project,dialog,.secondary,.panel-foot{background:#f0f2f6}
+.hero-panel{background:#e2e8f3;border-color:#cdd7e7}
+.panel-head{background:#dce4f2;color:#354c83}
+.build-steps li{border-color:#cdd7e7}
+.project-top{background:#e5eaf2}
+.project[data-repo="remem"] .project-top{background:#dfe6f5}
+.project[data-repo="IntegrationOS"] .project-top{background:#dfeaf0}
+.project[data-repo="owed--credit-memory-agent"] .project-top{background:#e3e7f3}
+.project[data-repo="Reflet_ai"] .project-top{background:#e0eae6}
+.tags span,.background-skills span{background:#e5e9f0}
+.filters button{background:#edf0f5}
+.filters button.active{background:var(--ink);color:#fff}
+.contact{background:#dde5f2;border-color:#cbd6e9}
+.secondary:hover{background:#e1e6ee}
