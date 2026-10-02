@@ -1,6 +1,6 @@
 # Sunday Victor | AI Agent Engineer
 
-A light, responsive portfolio featuring six AI projects from https://github.com/Sunvic567. Plain HTML, CSS, and JavaScript; no build, backend, API keys, or paid services required.
+A light, responsive portfolio featuring seven AI, agent, and application projects from https://github.com/Sunvic567. Plain HTML, CSS, and JavaScript; no build, backend, API keys, or paid services required.
 
 ## Publish on GitHub Pages
 
@@ -23,7 +23,7 @@ Open index.html, or run `python3 -m http.server 8000` in this directory and visi
 - Colors, layout, and typography: `style.css`.
 - Update the email in both HTML and JavaScript if it changes.
 
-Project descriptions are based on repository READMEs. They are not independent verification of deployed services or performance. Reflect AI is omitted from the AI project list because its current planning prototype uses editable templates rather than a remote language model. No private prototype URLs or secrets are included.
+Project descriptions are based on repository READMEs. They are not independent verification of deployed services or performance. Reflect AI is included as a planning prototype. Its current planner uses editable templates rather than a remote language model. No private prototype URLs or secrets are included.
 
 ## Personal positioning
 
