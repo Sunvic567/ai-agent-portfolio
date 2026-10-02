@@ -10,12 +10,13 @@ const projects = [
 const grid=document.querySelector('#projects');
 function render(filter='all'){
  const shown=projects.filter(p=>filter==='all'||p.groups.includes(filter));
- grid.innerHTML=shown.map(p=>`<article class="project"><div class="project-top"><span class="project-num">${String(projects.indexOf(p)+1).padStart(2,'0')}</span><span class="project-category">${p.category}</span></div><div class="project-body"><h3>${p.name}</h3><p>${p.description}</p><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div></div><div class="project-links"><button data-project="${p.repo}">Project details</button><a href="https://github.com/Sunvic567/${p.repo}" target="_blank" rel="noopener noreferrer">View source</a></div></article>`).join('');
+ grid.innerHTML=shown.map(p=>`<article class="project" data-repo="${p.repo}"><div class="project-top"><span class="project-num">${String(projects.indexOf(p)+1).padStart(2,'0')}</span><span class="project-category">${p.category}</span></div><div class="project-body"><h3>${p.name}</h3><p>${p.description}</p><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div></div><div class="project-links"><button data-project="${p.repo}">Read project overview</button><a href="https://github.com/Sunvic567/${p.repo}" target="_blank" rel="noopener noreferrer">View source</a></div></article>`).join('');
  document.querySelector('#results').textContent=`${shown.length} projects shown`;
 }
 document.querySelector('[data-filter="all"] span').textContent=projects.length;
 render();
 document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});render(b.dataset.filter)}));
+document.querySelectorAll('nav a[href^="#"]').forEach(link=>link.addEventListener('click',()=>{document.querySelectorAll('nav a').forEach(a=>a.removeAttribute('aria-current'));link.setAttribute('aria-current','location')}));
 const dialog=document.querySelector('#detail');
 grid.addEventListener('click',e=>{const button=e.target.closest('[data-project]');if(!button)return;const p=projects.find(p=>p.repo===button.dataset.project);document.querySelector('#detail-content').innerHTML=`<p class="eyebrow">${p.category}</p><h2 id="dialog-title">${p.name}</h2><h3>The problem</h3><p>${p.problem}</p><h3>The approach</h3><p>${p.approach}</p><h3>The output</h3><p>${p.output}</p><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div><div class="actions"><a class="button primary" href="https://github.com/Sunvic567/${p.repo}" target="_blank" rel="noopener noreferrer">Explore the repository</a></div>`;dialog.setAttribute('aria-labelledby','dialog-title');dialog.showModal()});
 document.querySelector('.close').addEventListener('click',()=>dialog.close());
