@@ -1,4 +1,4 @@
-# Sunday Victor | AI Agent Engineer
+# Sunday Victor | AI Engineer
 
 A light, responsive portfolio featuring seven AI, agent, and application projects from https://github.com/Sunvic567. Plain HTML, CSS, and JavaScript; no build, backend, API keys, or paid services required.
 
@@ -28,3 +28,8 @@ Project descriptions are based on repository READMEs. They are not independent v
 ## Personal positioning
 
 The bio connects Sunday’s data analysis background (Python, SQL, Excel, Power BI, Tableau) to AI agent engineering and his interest in tools for founders and small businesses. Remem has a dedicated feature section as well as a project card. No client results, employment dates, or performance metrics are invented.
+
+## October 2026 portfolio update
+
+Prioritizes Remem, IntegrationOS, and Sunvic RAG Assistant for AI engineering opportunities. Project details were checked against the READMEs and key source files. Includes a screenshot of Remem’s public homepage and a live website link. IntegrationOS and the RAG assistant are described as prototypes; no production performance or hiring outcomes are claimed. Preserves the soft-light design and the remaining projects.
+
